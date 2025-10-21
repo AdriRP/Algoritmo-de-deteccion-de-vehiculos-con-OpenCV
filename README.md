@@ -1,2 +1,5 @@
 # Algoritmo-de-deteccion-de-vehiculos-con-OpenCV
-Addddddddrián
+Introducción
+Explicación(Diagrama)
+Partes de código y Funciones
+Fotos del funcionamientos
