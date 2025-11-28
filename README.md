@@ -37,31 +37,46 @@ frame_index = 0  # contador global de frames
 · collections (para usar deque)
 
 
-
 ## Funciones
-**def resolve_coord(v, limit);** Se le pasa una coordenada de la imagen y su límite, devuelve la coordenada de la imagen corregido si fuera necesario; 
+```python
+def resolve_coord(v, limit):
+    ...
+```
+Se le pasa una coordenada de la imagen y su límite, devuelve la coordenada de la imagen corregido si fuera necesario;</br>
+ejemplo:</br>
+resolve_coord(10, 100) → 10</br>
+resolve_coord(-10, 100) → 90 (100 - 10)
 
-ejemplo:
-resolve_coord(10, 100) → 10
-resolve_coord(-10, 100) → 90 (100 - 10) 
+```python
+def pixels_per_meter_at(y_center, frame_h=frame_h):
+    ...
+```
+Calcula cuántos píxeles corresponden a un metro real según la posición vertical (y_center) del objeto en el frame y la altura del vídeo (frame_h)
 
-**def pixels_per_meter_at(y_center, frame_h=frame_h);** Calcula cuántos píxeles corresponden a un metro real según la posición vertical (y_center) del objeto en el frame y la altura del vídeo (frame_h)
-
-**def centroid_from_box(box):**
-    x, y, w, h = box  
+```python
+def centroid_from_box(box):
+    x, y, w, h = box  # x e y son la esquina superior izquierda, w y h el ancho y alto
     return (int(x + w/2), int(y + h/2))
+```
+Se le pasa una caja (lista con x, y, w, h) y calcula su centro.
 
- Se le pasa una caja (lista con x, y, w, h) y calcula su centro.
-// x e y son la esquina superior izquierda, w y h el ancho y alto
-
-**def euclidean(a, b):**
+```python
+def euclidean(a, b):
     return np.hypot(a[0]-b[0], a[1]-b[1]) 
-
+```
 Calcula la distancia euclídea entre 2 puntos
 
-**def register_object(centroid);** Le pasamos un centro y registra un nuevo vehículo en el diccionario
+```python
+def register_object(centroid):
+    ...
+```
+Le pasamos un centro y registra un nuevo vehículo en el diccionario
 
-**def deregister_object(obj_id);** Le pasamos el id del vehículo y lo elimina
+```python
+def deregister_object(obj_id):
+    ...
+```
+Le pasamos el id del vehículo y lo elimina
 
 ## Diagramas
 Diagrama del funcionamiento de update_tracker:
