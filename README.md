@@ -56,13 +56,13 @@ Calcula la distancia euclídea entre 2 puntos
 
 ## Diagramas
 Diagrama del funcionamiento de update_tracker:
-![Diagrama update_tracker](carretera_promedio.jpg)
+![Diagrama update_tracker](diagrama_updatetracker.png)
 
 
 ## Fotos del funcionamiento
 Foto del funcionamiento del algoritmo:
-![Foto detección coches](carretera_promedio.jpg)
+![Foto detección coches](foto_funcionamiento.png)
 
 Foto donde detecta el choque entre vehículos:
-![Foto detección accidente](carretera_promedio.jpg)
+![Foto detección accidente](foto_choque_png)
 
