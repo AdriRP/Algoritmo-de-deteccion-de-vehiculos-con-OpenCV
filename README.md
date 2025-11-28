@@ -116,9 +116,13 @@ Le pasamos una lista de centroides y si algunos de ellos están muy unidos los f
 
 
 ## Bucle Principal
-El bucle principal procesa cada frame del vídeo en tiempo real y lo modifica para obtener el resultado final. Para hacer esto, primero pasa el frame del vídeo a escala de grises, reduce el ruido, elimina la región del cronómetro para que no la cuente y calcula la diferencia entre el fondo sin coches y el actual para detectar dónde están estos, en último lugar, se binariza la imagen para que el algoritmo detecte fácilmente dónde están los cambios, siendo las partes blancas los movimientos detectados y los negros el fondo de la imagen. Después eliminamos el ruido pequeño, rellenamos los huecos negros dentro de zonas blancas y expandimos las regiones detectadas para que los coches aparezcan como áreas sólidas.</br>
+El bucle principal procesa cada frame del vídeo en tiempo real y lo modifica para obtener el resultado final. Para hacer esto, primero pasa el frame del vídeo a escala de grises, reduce el ruido, elimina la región del cronómetro para que no la cuente y calcula la diferencia entre el fondo sin coches y el actual para detectar dónde están estos, en último lugar, se binariza la imagen para que el algoritmo detecte fácilmente dónde están los cambios, siendo las partes blancas los movimientos detectados y los negros el fondo de la imagen. Después eliminamos el ruido pequeño, rellenamos los huecos negros dentro de zonas blancas y expandimos las regiones detectadas para que los coches aparezcan como áreas sólidas.
+
+
 A continuación, según la imagen creada, generamos todos los posibles contornos de coches detectados y una lista donde meteremos estas detecciones. Para cada contorno, calcularemos su área y analizaremos según su perspectiva si es suficientemente grande como para poder considerarse un coche, además de eliminar los contornos que estén muy cerca del cronómetro. Para los coches que cumplan el tamaño adecuado, los pequeños los aceptaremos como detecciones independientes, pero los grandes analizaremos si son dos coches juntos e intentaremos separarlos.</br>
-Una vez tenemos cada detección encontrada en el frame, eliminamos las cajas que se superponen y fusionamos las que están muy cerca entre ellas, ahora actualizamos los coches registrados, creamos los ids nuevos y controlamos los coches que han desparecido según las detecciones del frame actual.</br>
+Una vez tenemos cada detección encontrada en el frame, eliminamos las cajas que se superponen y fusionamos las que están muy cerca entre ellas, ahora actualizamos los coches registrados, creamos los ids nuevos y controlamos los coches que han desparecido según las detecciones del frame actual.
+
+
 Con toda esta información, ya podemos dibujar todas las cajas, calcularemos la velocidad y la mostraremos con el ID sobre la caja, la cual será verde si su velocidad es menor a 120 y roja en caso contrario. Y ya para terminar, dibujaremos la escala píxeles/metros de la imagen, los fotogramas por segundo del vídeo y el número de coches que ha detectado.
 
 
