@@ -2,7 +2,7 @@
 ## Introducción
 En este proyecto desarrollamos un detector de vehículos usando principalmente la librería **cv2** en python, de forma que a partir de un vídeo de una autopista se muestra el mismo vídeo con cajas delimitadoras en cada coche durante su movimiento, además de un id y la velocidad aproximada que tiene cada uno.
 
-__Vídeo en el que aplicaremos el algoritmo:__ [](https://alumnosulpgc-my.sharepoint.com/:v:/g/personal/victor_diaz106_alu_ulpgc_es/IQBHLkIDytv6Tocon6da4C_iAR7Sfe0N25ejB0UouSDJSI8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=G1vs3J)
+__Vídeo en el que aplicaremos el algoritmo:__ [Enlace al vídeo trafico.mp4](https://alumnosulpgc-my.sharepoint.com/:v:/g/personal/victor_diaz106_alu_ulpgc_es/IQBHLkIDytv6Tocon6da4C_iAR7Sfe0N25ejB0UouSDJSI8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=G1vs3J)
 
 Primero generamos una imagen promedio para sacar el fondo de la imagen sin vehículos, una vez tengamos la imagen generada y guardada podemos ejecutar el resto del código.
 
