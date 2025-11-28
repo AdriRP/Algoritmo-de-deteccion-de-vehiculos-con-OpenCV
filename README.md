@@ -64,5 +64,5 @@ Foto del funcionamiento del algoritmo:
 ![Foto detección coches](foto_funcionamiento.png)
 
 Foto donde detecta el choque entre vehículos:
-![Foto detección accidente](foto_choque_png)
+![Foto detección accidente](foto_choque.png)
 
