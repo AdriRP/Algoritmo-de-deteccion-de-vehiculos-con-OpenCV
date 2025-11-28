@@ -1,4 +1,4 @@
-# Algoritmo-de-deteccion-de-vehiculos-con-OpenCV
+# Algoritmo de Deteccion de Vehiculos en Python - Adrián Rodríguez Pérez y Víctor Díaz Puga
 ## Introducción
 En este proyecto desarrollamos un detector de vehículos usando principalmente la librería ***cv2*** en python, de forma que a partir de un vídeo de una autopista se muestra el mismo vídeo con cajas delimitadoras en cada coche durante su movimiento, además de un id y la velocidad aproximada que tiene cada uno
 
@@ -89,6 +89,30 @@ def compute_speed_for_track(track_deque):
     ...
 ```
 Le pasamos el historial de posiciones de un vehículo y calcula su velocidad media utilizando pixels_per_meter_at
+
+```python
+def rect_intersection_area(a, b):
+    ...
+```
+Le pasamos dos cajas y calcula el área de intersección entre ellas
+
+```python
+def iou(a,b):
+    ... 
+```
+Le pasamos dos cajas y devuelve una proporción de qué tanto se superponen entre 0 y 1 dividendo la intersección entre la unión
+
+```python
+def nms_boxes(boxes, iou_thresh):
+    ...
+```
+Le pasamos una lista de cajas y usando iou(a,b) devuelve las que no se superponen más que el valor iou_thresh (usaremos iou_thresh=0 para quedarnos solo con las cajas que no se superpongan)
+
+```python
+def fuse_close_centroids(detections_centroids)
+    ...
+```
+Le pasamos una lista de centroides y si algunos de ellos están muy unidos los fusiona para evitar errores con los id de los vehículos; en caso contrario los deja igual y devuelve la lista resultante
 
 
 ## Bucle Principal
