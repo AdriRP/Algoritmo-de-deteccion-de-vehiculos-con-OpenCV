@@ -14,19 +14,28 @@ __El algoritmo se divide en:__
 - **Estado del Tracker**: Definimos los diccionarios que usaremos para almacenar la información y todas las funciones que usaremos en el bucle principal para obtener la posición, la velocidad y el seguimiento de los coches con sus ids asociados
 
 next_object_id = 0
+
 objects = {}  # id -> posición central del coche
+
 disappeared = {}  # id -> número de frames consecutivos en los que ese id no se detectó
+
 tracks = {}  # id -> historial de posiciones (frame_index, posición)
+
 frame_index = 0  # contador global de frames
+
 
 - **Bucle Principal**: Procesa cada frame del vídeo para analizar el movimiento, hace todos los cálculos necesarios para dibujar el contador de coches, dónde se encuentra cada uno, su respectivo id y a la velocidad a la que se desplaza en el mismo vídeo y mostrarlo
 
 
 ## Librerías usadas
 · cv2
+
 · numpy
+
 · matplotlib.pyplot
+
 · collections (para usar deque)
+
 
 
 ## Funciones
